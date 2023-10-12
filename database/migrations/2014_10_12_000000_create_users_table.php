@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('usu_nome');
             $table->string('usu_email')->unique();
             $table->string('usu_senha');
-            $table->timestamp('email_verified_at')->nullable();
-            $table->rememberToken();
-            $table->timestamps();
+            // $table->timestamp('email_verified_at')->nullable();
+            // $table->rememberToken();
+            // $table->timestamps();
         });
     }
 
