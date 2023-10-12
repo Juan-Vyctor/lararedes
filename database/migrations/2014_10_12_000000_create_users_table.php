@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('tb_usuarios', function (Blueprint $table) {
             $table->id('usu_id');
             $table->string('usu_nome');
-            $table->string('usu_email')->unique();
+            $table->string('usu_email')
+            // ->unique()
+            ;
             $table->string('usu_senha');
             // $table->timestamp('email_verified_at')->nullable();
             // $table->rememberToken();
