@@ -39,8 +39,8 @@
                     <div class="col-8">
                         <form method="POST" action="store"> @csrf
                             <div class="mb-4 form-floating">
-                                <input type="text" class="form-control" id="username" name="username" placeholder="João Garcia">
-                                <label for="username" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="João Garcia">
+                                <label for="nome" class="form-label">Nome</label>
                               </div>
                             <div class="mb-4 form-floating">
                                 <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">

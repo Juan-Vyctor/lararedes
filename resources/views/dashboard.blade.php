@@ -188,17 +188,12 @@ integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUU
   <div class="row d-flex justify-content-center ">
       <div class="col-5">
         <main class="p-3 bg-dark bg-opacity-75 rounded-5">
-            <?php
-              /*$user_obj = new Usuarios(connection());
-              $username = $user_obj->getName($_SESSION['email']);
-              echo"<h1>Bem vindo, $username</h1>";
-              */
-            ?>
+            <h1>Bem vindo, {{$usuario}}</h1>"
             <p class="lead">O que você deseja fazer?</p>
             <p class="lead">
             <a href="/" class="btn btn-lg btn-light fw-bold border-white bg-white">Sair da conta</a>
             <a href="/" class="btn btn-lg btn-light fw-bold border-white bg-white">Sair da conta só que 2</a>
-            <a href="/" class="btn btn-lg btn-light fw-bold border-white bg-white">Sairsó que 5</a>
+            <a href="/" class="btn btn-lg btn-light fw-bold border-white bg-white">Sair só que 5</a>
             </p>
     </main>
       </div>

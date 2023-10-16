@@ -42,8 +42,8 @@
                                 <label for="email" class="form-label">Email</label>
                               </div>
                             <div class="mb-4 form-floating">
-                                <input type="password" class="form-control" id="password" name="password" placeholder="xxxxx">
-                                <label for="password" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="senha" name="senha" placeholder="xxxxx">
+                                <label for="senha" class="form-label">Senha</label>
                             </div>
                             <div class="d-flex justify-content-center">
                                 <button type="submit" class="btn btn-success addingcolor text-white w-75">Acessar</button>

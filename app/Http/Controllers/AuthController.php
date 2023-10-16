@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -11,8 +14,13 @@ class AuthController extends Controller
     }
 
     public function store(Request $request) {
-        // insira aqui codigo
-        return view('dashboard');
+        $nome = $request['nome'];
+        User::create([
+            'nome' => $nome,
+            'email' => $request['email'],
+            'senha' => bcrypt($request['senha']),
+        ]);
+        return view('dashboard', ['usuario'=>$nome]);
     }
 
     public function login() {
@@ -20,8 +28,15 @@ class AuthController extends Controller
     }
 
     public function auth(Request $request) {
-        // insira aqui codigo
-        return view('dashboard');
+        $email = $request['email'];
+        $senha = $request['senha'];
+        $usuario = User::where('email', $email)->first();
+        if (!Hash::check($senha, $usuario->senha)) {
+            return view('home');
+        }
+        Auth::login($usuario);
+        $nome = $usuario->nome;
+        return view('dashboard', ['usuario'=>$nome]);
     }
     
 }
